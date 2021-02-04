@@ -1,0 +1,19 @@
+name:
+Mirror
+Repo
+     on: [push]
+	 # schedule:
+	   #nightly (0th hour oth minute of every day)
+	 # -cron: '0 0 * * *'
+jobs:
+    build:
+	  runs-on: ubuntu-latest
+	  steps:
+	  - name: Mirror
+	    run:|
+		git clone --bare cloud_repo_Url
+		cd  repo.git
+		git remote add github 
+		git push --mirror github
+	env:
+	   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
