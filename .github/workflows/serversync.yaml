@@ -1,6 +1,6 @@
 name:
-Mirror
-Repo
+Mirror Repo
+
      on: [push]
 	 # schedule:
 	   #nightly (0th hour oth minute of every day)
@@ -11,9 +11,9 @@ jobs:
 	  steps:
 	  - name: Mirror
 	    run:|
-		git clone --bare cloud_repo_Url
-		cd  repo.git
+		git clone --bare https://github.com/Rajeshcn02/CloudtoServerSync.git
+		cd  CloudtoServerSync.git
 		git remote add github 
-		git push --mirror github
+		git push --mirror github 
 	env:
 	   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
