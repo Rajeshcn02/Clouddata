@@ -6,10 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mirror
-	run:|
-		git clone --bare https://github.com/Rajeshcn02/CloudtoServerSync.git
-	  	cd CloudtoServerSync.git
-	  	git remote add github 
-	        git push --mirror github 
+run:|
+	git clone --bare https://github.com/Rajeshcn02/CloudtoServerSync.git
+	cd CloudtoServerSync.git
+	git remote add github 
+	git push --mirror github 
 env:
  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
