@@ -1,6 +1,9 @@
 name: Mirror Repo
 
 on: [push]
+  #schedule:
+  #  - cron: 0 0 * * *
+      
 
 jobs:
   build:
@@ -12,5 +15,4 @@ jobs:
         run: |
           git clone --bare https://github.com/Rajeshcn02/CloudtoServerSync.git
           cd CloudtoServerSync.git
-          git remote add github "https://Rajeshcn02:${GITHUB_TOKEN}@github.com/Rajeshcn02/Clouddata.git"
-          git push --mirror github
+          git push --mirror "https://Rajeshcn02:${GITHUB_TOKEN}@github.com/Rajeshcn02/Clouddata.git"
