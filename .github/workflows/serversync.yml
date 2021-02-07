@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Mirror
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.MIGRATE_SECRET }}
         run: |
           git clone --bare https://github.com/Rajeshcn02/CloudtoServerSync.git
           cd CloudtoServerSync.git
