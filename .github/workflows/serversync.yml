@@ -10,7 +10,7 @@ jobs:
         run: |
           git clone --bare https://github.com/Rajeshcn02/CloudtoServerSync.git
           cd CloudtoServerSync.git
-          git remote add github https://Rajeshcn02:5c6567dcb75d7023f6ea970dbfcb41fca977177a@github.com/Rajeshcn02/Clouddata.git
+          git remote add github "https://Rajeshcn02:5c6567dcb75d7023f6ea970dbfcb41fca977177a@github.com/Rajeshcn02/Clouddata.git"
           git push --mirror github 
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
